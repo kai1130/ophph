@@ -20,7 +20,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     message_input = st.text_area(
-        label='type a message',
+        label='Type Message',
         value="I'm not satisfied with what i received",
         key="placeholder",
     )
@@ -31,7 +31,7 @@ with col1:
 
 with col2:
     category_input = st.text_area(
-        label='define categories',
+        label='Define Categories',
         value="Price or Product Inquiry\nOrder Placement\nAppointment Scheduling\nCustomer Service",
         key='categories',
     )
