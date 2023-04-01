@@ -63,6 +63,6 @@ if classify:
         label='AutoClassify',
         value=categories_str,
         disabled=True,
-        label_visibility="hidden"
+        label_visibility="collapsed"
     )
     st.caption(f'Confidence Score: {categories_confidence}%')
