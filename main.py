@@ -58,5 +58,8 @@ if classify:
     categories_max = float(category_similarity.max(axis=1)[0][0])
     categories_confidence = confidence(categories_max)
 
-    st.subheader('AutoClassify')
-    st.metric(label="Category", value=categories_str, delta=categories_confidence)
+    st.metric(
+        label="Predicted Category",
+        value=categories_str,
+        delta=f'Confidence: {categories_confidence:.2f}%'
+    )
