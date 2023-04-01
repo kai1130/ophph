@@ -42,10 +42,10 @@ with col2:
         st.caption('Current Categories')
         st.markdown(categories)
 
-columns = st.columns((2, 1, 2))
-classify = columns[1].button('AutoClassify Message!')
-
 st.markdown("""---""")
+
+columns = st.columns((1, 1, 1))
+classify = columns[1].button('AutoClassify Message!')
 
 if classify:
 
