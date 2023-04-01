@@ -41,7 +41,7 @@ with col2:
     if category_input:
         categories = [c.strip() for c in category_input.split('\n')]
         st.caption('Current Categories')
-        st.markdown(category_input)
+        st.write(category_input)
 
 st.markdown("""---""")
 
@@ -68,4 +68,4 @@ if classify:
         value=categories_str,
         delta=f'Confidence: {categories_confidence:.2f}%'
     )
-    st.markdown("""---""")
+st.markdown("""---""")
