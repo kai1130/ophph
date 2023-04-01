@@ -21,21 +21,23 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader('Type a Message')
     message_input = st.text_area(
-        label='Input message here',
+        label='type a message',
         value='Hi, how much does your product cost?',
-        key="placeholder"
+        key="placeholder",
+        label_visibility='collapsed'
     )
     if message_input:
         message = message_input
-        st.caption(f"Current Message")
+        st.caption("Current Message")
         st.write(f'{message}')
 
 with col2:
     st.subheader('Define Categories')
     category_input = st.text_area(
-        label='Desired categories (separated by commas)',
+        label='define categories',
         value="Price or Product Inquiry\nOrder Placement\nAppointment Scheduling",
-        key='categories'
+        key='categories',
+        label_visibility='collapsed'
     )
 
     if category_input:
