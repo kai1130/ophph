@@ -59,10 +59,4 @@ if classify:
     categories_confidence = confidence(categories_max)
 
     st.subheader('AutoClassify')
-    st.text_input(
-        label='AutoClassify',
-        value=categories_str,
-        disabled=True,
-        label_visibility="collapsed"
-    )
-    st.caption(f'Confidence Score: {categories_confidence}%')
+    st.metric(label="Category", value=categories_str, delta=categories_confidence)
