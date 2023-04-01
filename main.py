@@ -58,8 +58,8 @@ if classify:
     categories_max = float(category_similarity.max(axis=1)[0][0])
     categories_confidence = confidence(categories_max)
 
-    st.text_area(
-        label='AutoCategory',
+    st.subheader('AutoClassify')
+    st.text_input(
         value=categories_str,
         disabled=True
     )
