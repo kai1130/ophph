@@ -13,6 +13,7 @@ def confidence(cos_sim):
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 st.header('Zero-Shot Text Classification')
+st.caption('A quick out-of-the-box implementation :)')
 st.markdown("""---""")
 
 col1, col2 = st.columns(2)
@@ -67,3 +68,4 @@ if classify:
         value=categories_str,
         delta=f'Confidence: {categories_confidence:.2f}%'
     )
+    st.markdown("""---""")
