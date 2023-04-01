@@ -22,7 +22,7 @@ with col1:
     st.subheader('Type a Message')
     message_input = st.text_area(
         label='type a message',
-        value="Try one of these:\nI'm not satisfied with what i received\nHi, how much does your product cost?",
+        value="I'm not satisfied with what i received",
         key="placeholder",
         label_visibility='collapsed'
     )
