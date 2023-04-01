@@ -42,6 +42,7 @@ with col2:
         st.markdown(categories)
 
 classify = st.button(label='Classify Message')
+st.markdown("""---""")
 
 if classify:
 
@@ -61,6 +62,5 @@ if classify:
     st.metric(
         label="Predicted Category",
         value=categories_str,
-        delta=f'Confidence: {categories_confidence:.2f}%',
-        delta_color='off'
+        delta=f'Confidence: {categories_confidence:.2f}%'
     )
