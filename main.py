@@ -41,7 +41,7 @@ with col2:
     if category_input:
         categories = [c.strip() for c in category_input.split('\n')]
         st.caption('Current Categories')
-        st.write(category_input)
+        st.write(categories.join('  \n'))
 
 st.markdown("""---""")
 
