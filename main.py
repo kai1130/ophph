@@ -4,6 +4,12 @@ import pandas as pd
 import streamlit as st
 from sentence_transformers import SentenceTransformer, util
 
+
+def confidence(cos_sim):
+    percent_dist = (math.pi - math.acos(cos_sim)) * 100 / math.pi
+    return percent_dist
+
+
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 col1, col2 = st.columns(2)
@@ -32,3 +38,17 @@ with col2:
         st.write('Categories')
         st.markdown(categories)
 
+message_embedding = model.encode([message])
+category_embeddings = model.encode(categories)
+
+categories_map = {k: v for k, v in enumerate(categories)}
+
+category_similarity = util.cos_sim(message_embedding, category_embeddings)
+
+categories_argmax = int(category_similarity.argmax(axis=1)[0])
+categories_str = categories_map.get(categories_argmax, None)
+
+categories_max = float(category_similarity.max(axis=1)[0][0])
+categories_confidence = confidence(categories_max)
+
+st.write('AutoCategory: {categories_str} | Confidence: {categories_confidence}%')
