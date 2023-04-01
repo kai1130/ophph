@@ -37,7 +37,7 @@ with col2:
     )
 
     if category_input:
-        categories = [c.strip() for c in category_input.split(',')]
+        categories = [c.strip() for c in category_input.split('\n')]
         st.caption('Current Categories')
         st.markdown(categories)
 
@@ -58,4 +58,9 @@ if classify:
     categories_max = float(category_similarity.max(axis=1)[0][0])
     categories_confidence = confidence(categories_max)
 
-    st.write(f'AutoCategory: {categories_str} | Confidence: {categories_confidence}%')
+    st.text_area(
+        label='AutoCategory',
+        value=categories_str,
+        disabled=True
+    )
+    st.write(f'Confidence: {categories_confidence}%')
