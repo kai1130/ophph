@@ -60,7 +60,9 @@ if classify:
 
     st.subheader('AutoClassify')
     st.text_input(
+        label='AutoClassify',
         value=categories_str,
-        disabled=True
+        disabled=True,
+        label_visibility="hidden"
     )
-    st.write(f'Confidence: {categories_confidence}%')
+    st.caption(f'Confidence Score: {categories_confidence}%')
