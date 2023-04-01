@@ -22,7 +22,7 @@ with col1:
     st.subheader('Type a Message')
     message_input = st.text_area(
         label='type a message',
-        value='Hi, how much does your product cost?',
+        value="Try one of these\n:I'm not satisfied with what i received\nHi, how much does your product cost?",
         key="placeholder",
         label_visibility='collapsed'
     )
@@ -35,7 +35,7 @@ with col2:
     st.subheader('Define Categories')
     category_input = st.text_area(
         label='define categories',
-        value="Price or Product Inquiry\nOrder Placement\nAppointment Scheduling",
+        value="Price or Product Inquiry\nOrder Placement\nAppointment Scheduling\nCustomer Service",
         key='categories',
         label_visibility='collapsed'
     )
