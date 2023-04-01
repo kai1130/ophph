@@ -19,12 +19,10 @@ st.markdown("""---""")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader('Type a Message')
     message_input = st.text_area(
         label='type a message',
         value="I'm not satisfied with what i received",
         key="placeholder",
-        label_visibility='collapsed'
     )
     if message_input:
         message = message_input
@@ -32,12 +30,10 @@ with col1:
         st.write(f'{message}')
 
 with col2:
-    st.subheader('Define Categories')
     category_input = st.text_area(
         label='define categories',
         value="Price or Product Inquiry\nOrder Placement\nAppointment Scheduling\nCustomer Service",
         key='categories',
-        label_visibility='collapsed'
     )
 
     if category_input:
