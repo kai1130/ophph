@@ -61,5 +61,6 @@ if classify:
     st.metric(
         label="Predicted Category",
         value=categories_str,
-        delta=f'Confidence: {categories_confidence:.2f}%'
+        delta=f'Confidence: {categories_confidence:.2f}%',
+        delta_color='off'
     )
