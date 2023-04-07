@@ -32,7 +32,7 @@ with col1:
 with col2:
     category_input = st.text_area(
         label='Define Categories',
-        value="Order Summary\nCustomer Service\nStatus Update",
+        value="Order Summary\nCustomer Service\nDelivery Update",
         key='categories',
     )
 
