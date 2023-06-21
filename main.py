@@ -21,7 +21,7 @@ col1, col2 = st.columns(2)
 with col1:
     message_input = st.text_area(
         label='Type Message',
-        value="Sunnyvale I bring Monday, others will bring Beef Knuckle tomorrow",
+        value="Where is VIN?",
         key="placeholder",
     )
     if message_input:
@@ -32,7 +32,7 @@ with col1:
 with col2:
     category_input = st.text_area(
         label='Define Categories',
-        value="Order Summary\nCustomer Service\nDelivery Update",
+        value="What is the current location of VIN?\nWhat is the soft match date of VIN?\nWhat is the status of VIN?",
         key='categories',
     )
 
@@ -44,7 +44,7 @@ with col2:
 st.markdown("""---""")
 
 columns = st.columns((1, 1, 1))
-classify = columns[1].button('AutoClassify Message!')
+classify = columns[1].button('Classify Request')
 
 if classify:
 
