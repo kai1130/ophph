@@ -76,5 +76,5 @@ if classify:
         delta=f'Confidence: {categories_confidence:.2f}%'
     )
     for tup in categories_argstrs:
-        st.text(categories_argstrs)
+        st.text(tup)
 st.markdown("""---""")
