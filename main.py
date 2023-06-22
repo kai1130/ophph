@@ -63,7 +63,7 @@ if classify:
     
     categories_argstrs = [
         (categories_map.get(cat, None),
-        category_similarity[cat])
+        category_similarity.tolist()[0][cat])
         for cat in categories_args[1:5]
     ]
 
