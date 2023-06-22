@@ -62,7 +62,7 @@ if classify:
     categories_args = np.argsort(category_similarity)
     categories_argstrs = [
         (categories_map.get(cat, None),
-        category_similarity[cat]),
+        category_similarity[cat])
         for cat in categories_args[1:5]
     ]
 
