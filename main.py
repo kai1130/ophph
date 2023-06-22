@@ -60,7 +60,11 @@ if classify:
     categories_str = categories_map.get(categories_argmax, None)
 
     categories_args = np.argsort(category_similarity)
-    categories_argstrs = [categories_map.get(cat, None) for cat in categories_args[1:5]]
+    categories_argstrs = [
+        (categories_map.get(cat, None),
+        category_similarity[cat]),
+        for cat in categories_args[1:5]
+    ]
 
     categories_max = float(category_similarity.max(axis=1)[0][0])
     categories_confidence = confidence(categories_max)
@@ -70,5 +74,5 @@ if classify:
         value=categories_str,
         delta=f'Confidence: {categories_confidence:.2f}%'
     )
-    st.text(categories_arg5[1:5])
+    st.text(categories_argstrs[1:5])
 st.markdown("""---""")
