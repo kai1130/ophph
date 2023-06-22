@@ -64,7 +64,7 @@ if classify:
     categories_argstrs = [
         (categories_map.get(cat, None),
         category_similarity.tolist()[0][cat])
-        for cat in categories_args[1:5]
+        for cat in categories_args[-5:-1]
     ]
 
     categories_max = float(category_similarity.max(axis=1)[0][0])
@@ -75,5 +75,6 @@ if classify:
         value=categories_str,
         delta=f'Confidence: {categories_confidence:.2f}%'
     )
-    st.text(categories_argstrs[1:5])
+    for tup in categories_argstrs:
+        st.text(categories_argstrs)
 st.markdown("""---""")
