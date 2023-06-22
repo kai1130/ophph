@@ -60,6 +60,9 @@ if classify:
     categories_str = categories_map.get(categories_argmax, None)
 
     categories_args = np.argsort(category_similarity.tolist())
+
+    st.text(category_similarity.tolist())
+    st.text(categories_args)
     
     categories_argstrs = [
         (categories_map.get(cat, None),
