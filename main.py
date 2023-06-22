@@ -59,8 +59,8 @@ if classify:
     categories_argmax = int(category_similarity.argmax(axis=1)[0])
     categories_str = categories_map.get(categories_argmax, None)
 
-    categories_arg5 = np.argsort(category_similarity)
-    categories_arg5 = categories_str[categories_arg5]
+    categories_args = np.argsort(category_similarity)
+    categories_argstrs = [categories_map.get(cat, None) for cat in categories_args[1:5]]
 
     categories_max = float(category_similarity.max(axis=1)[0][0])
     categories_confidence = confidence(categories_max)
